@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru & Staf - LPM MTS DARUL ULUM</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://picsum.photos/seed/favicon/32/32.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Memuat...</p>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+<a class="navbar-brand" href="index.html">
+    <img src="assets/images/logo (1).png" alt="Logo Sekolah" class="logo">
+    <span class="school-name">LPM MTS DARUL ULUM</span>
+</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profil.html">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="berita.html">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeri.html">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ekstrakurikuler.html">Ekstrakurikuler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="guru.html">Guru & Staf</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="page-title">Guru & Staf</h1>
+                        <p class="page-subtitle">Tim pendidik profesional yang berdedikasi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teacher Filter -->
+        <section class="py-4">
+            <div class="container">
+                <div class="text-center">
+                    <button class="btn btn-outline-primary teacher-filter-btn active me-2 mb-2" data-filter="all">Semua</button>
+                    <button class="btn btn-outline-primary teacher-filter-btn me-2 mb-2" data-filter="guru">Guru</button>
+                    <button class="btn btn-outline-primary teacher-filter-btn me-2 mb-2" data-filter="staff">Staf</button>
+                    <button class="btn btn-outline-primary teacher-filter-btn mb-2" data-filter="admin">Administrasi</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teacher Grid -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4" id="all-teachers-container">
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="1">
+                            <img src="https://picsum.photos/seed/teacher1/300/300.jpg" class="card-img-top" alt="Dr. Ahmad Wijaya, M.Pd.">
+                            <div class="card-body">
+                                <h5 class="teacher-name">Dr. Ahmad Wijaya, M.Pd.</h5>
+                                <p class="teacher-position">Kepala Sekolah</p>
+                                <p class="teacher-subject">Manajemen Pendidikan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="2">
+                            <img src="https://picsum.photos/seed/teacher2/300/300.jpg" class="card-img-top" alt="Drs. Budi Santoso">
+                            <div class="card-body">
+                                <h5 class="teacher-name">Drs. Budi Santoso</h5>
+                                <p class="teacher-position">Wakil Kepala Sekolah Bidang Kurikulum</p>
+                                <p class="teacher-subject">Matematika</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="staff">
+                        <div class="card teacher-card h-100" data-teacher-id="9">
+                            <img src="https://picsum.photos/seed/staff1/300/300.jpg" class="card-img-top" alt="Bambang Sutrisno">
+                            <div class="card-body">
+                                <h5 class="teacher-name">Bambang Sutrisno</h5>
+                                <p class="teacher-position">Staf Administrasi</p>
+                                <p class="teacher-subject">Administrasi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Teacher Detail Modal -->
+    <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teacherModalLabel">Profil Guru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="teacherModalBody">
+                    <!-- Teacher detail will be inserted here by JavaScript -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">LPM MTS DARUL ULUM</h5>
+                    <p class="mb-3">Menciptakan generasi unggul yang berkarakter, berprestasi, dan berwawasan global untuk masa depan Indonesia yang lebih baik.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-link me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-link">Beranda</a></li>
+                        <li class="mb-2"><a href="profil.html" class="footer-link">Profil</a></li>
+                        <li class="mb-2"><a href="berita.html" class="footer-link">Berita</a></li>
+                        <li class="mb-2"><a href="galeri.html" class="footer-link">Galeri</a></li>
+                        <li class="mb-2"><a href="ekstrakurikuler.html" class="footer-link">Ekstrakurikuler</a></li>
+                        <li class="mb-2"><a href="guru.html" class="footer-link">Guru & Staf</a></li>
+                        <li class="mb-2"><a href="kontak.html" class="footer-link">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Kontak</h5>
+                    <div class="contact-item mb-2">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span>Jl. Pendidikan No. 123, Depok</span>
+                    </div>
+                    <div class="contact-item mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        <span>(021) 1234567</span>
+                    </div>
+                    <div class="contact-item mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>info@smanharapanbangsa.sch.id</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top pt-4 mt-4 text-center">
+                <p class="mb-0">&copy; <span id="current-year"></span> LPM MTS DARUL ULUM. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
