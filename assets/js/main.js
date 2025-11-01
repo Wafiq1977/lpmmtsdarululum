@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', function() {
         setTimeout(function() {
             document.getElementById('preloader').classList.add('hidden');
-        }, 500);
+        }, 100);
     });
     
     // Set current year in footer
@@ -63,24 +63,48 @@ document.addEventListener('DOMContentLoaded', function() {
     const newsData = [
         {
             id: 7,
-            title: 'Juara 2 pi Lomba Tingkat (LT) Pramuka',
-            date: '10 Juli 2023',
-            excerpt: 'Juara 2 pi Lomba Tingkat (LT) Pramuka',
+            title: 'Juara 1 Pi Lomba Tingkat (LT) Tingkat Kecamatan Tahun 2025',
+            date: 'Tahun 2025',
+            excerpt: 'Juara 1 Pi Lomba Tingkat (LT) Tingkat Kecamatan Tahun 2025',
             image: 'assets/images/prestasi.png',
-            content: 'Juara 2 pi Lomba Tingkat (LT) Pramuka'
+            content: 'Juara 1 Pi Lomba Tingkat (LT) Tingkat Kecamatan Tahun 2025'
+        },
+        {
+            id: 11,
+            title: 'Juara 1 PI Lomba Gerak Jalan Tingkat Kecamatan Tahun 2025',
+            date: '15 Juli 2025',
+            excerpt: 'Juara 1 PI Lomba Gerak Jalan Tingkat Kecamatan Tahun 2025',
+            image: 'assets/images/lomba gerak jalan.png',
+            content: 'Juara 1 PI Lomba Gerak Jalan Tingkat Kecamatan Tahun 2025'
+        },
+        {
+            id: 12,
+            title: 'Juara 2 PA Lomba Gerak Jalan Tingkat Kecamatan Tahun 2025',
+            date: '15 Juli 2025',
+            excerpt: 'Juara 2 PA Lomba Gerak Jalan Tingkat Kecamatan Tahun 2025',
+            image: 'assets/images/gerak jalan .png',
+            content: 'Juara 2 PA Lomba Gerak Jalan Tingkat Kecamatan Tahun 2025'
+        },
+        {
+            id: 13,
+            title: 'Juara 2 PA Lomba Tilawatil Qur\'an Tingkat Kecamatan Tahun 2025',
+            date: '20 Juli 2025',
+            excerpt: 'Juara 2 PA Lomba Tilawatil Qur\'an Tingkat Kecamatan Tahun 2025',
+            image: 'assets/images/olimpiade.png',
+            content: 'Juara 2 PA Lomba Tilawatil Qur\'an Tingkat Kecamatan Tahun 2025'
         },
         {
             id: 8,
-            title: 'Juara 3 pa Lomba Tingkat (LT) Pramuka tingkat kecamatan',
-            date: '10 Juli 2023',
-            excerpt: 'Juara 3 pa Lomba Tingkat (LT) Pramuka tingkat kecamatan',
+            title: 'Juara 2 pa Lomba Tingkat (LT) Pramuka tingkat kecamatan Tahun 2025',
+            date: 'Tahun 2025',
+            excerpt: 'Juara 2 pa Lomba Tingkat (LT) Pramuka tingkat kecamatan Tahun 2025',
             image: 'assets/images/prestasi (1).png',
-            content: 'Juara 3 pa Lomba Tingkat (LT) Pramuka tingkat kecamatan'
+            content: 'Juara 2 pa Lomba Tingkat (LT) Pramuka tingkat kecamatan Tahun 2025'
         },
         {
             id: 9,
-            title: 'Juara 2 pa & pi Lomba Tingkat (LT) Pramuka',
-            date: '10 Juli 2023',
+            title: 'Juara 1 dan 2, pa & pi Lomba Tingkat (LT) Pramuka',
+            date: 'Tahun 2025',
             excerpt: 'Juara 2 pa & pi Lomba Tingkat (LT) Pramuka',
             image: 'assets/images/prestasi (2).png',
             content: 'Juara 2 pa & pi Lomba Tingkat (LT) Pramuka'
@@ -88,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 10,
             title: 'Lomba Olimpiade Tingkat Kabupaten',
-            date: '10 Juli 2023',
+            date: 'Tahun 2025',
             excerpt: 'Lomba Olimpiade Tingkat Kabupaten',
             image: 'assets/images/prestasi (3).png',
             content: 'Lomba Olimpiade Tingkat Kabupaten'
@@ -101,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 1,
             name: 'Pramuka',
             icon: 'fa-campground',
+            color: '#FF6B35',
             description: 'Kegiatan pramuka mengajarkan keterampilan survival, kepemimpinan, dan kerjasama tim. Siswa akan belajar tentang navigasi, pertolongan pertama, dan berkemah di alam.',
             schedule: 'Sabtu, 07:00 - 10:00',
             image: 'https://picsum.photos/seed/pramuka/800/500.jpg'
@@ -109,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 2,
             name: 'Darul Ulum Inggris Clup (DEC)',
             icon: 'fa-language',
+            color: '#00A86B',
             description: 'Darul Ulum English Club (DEC) adalah kegiatan ekstrakurikuler yang fokus pada pengembangan kemampuan bahasa Inggris siswa melalui berbagai aktivitas seperti diskusi, debat, dan presentasi.',
             schedule: 'Jumat, 15:00 - 17:00',
             image: 'https://picsum.photos/seed/english-club/800/500.jpg'
@@ -117,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 3,
             name: 'Sholawat Rebana',
             icon: 'fa-drum',
+            color: '#8B5CF6',
             description: 'Sholawat Rebana adalah kegiatan seni musik Islam yang menggabungkan sholawat dan iringan rebana. Siswa akan belajar tentang seni musik tradisional dan meningkatkan keimanan melalui lagu-lagu religi.',
             schedule: 'Rabu, 15:00 - 17:00',
             image: 'https://picsum.photos/seed/sholawat/800/500.jpg'
@@ -125,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 4,
             name: 'Seni Baca Al quran',
             icon: 'fa-book-open',
+            color: '#F59E0B',
             description: 'Seni Baca Al-Quran mengajarkan teknik membaca Al-Quran dengan tartil dan tajwid yang benar. Siswa akan belajar tentang seni baca Al-Quran dan meningkatkan keimanan serta ketaqwaan.',
             schedule: 'Selasa, 15:00 - 17:00',
             image: 'https://picsum.photos/seed/quran/800/500.jpg'
@@ -133,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 5,
             name: 'Olahraga Prestasi',
             icon: 'fa-trophy',
+            color: '#EF4444',
             description: 'MTS Darul Ulum memiliki ekstrakurikuler olahraga prestasi yang mencakup berbagai cabang olahraga seperti sepak bola, basket, voli, dan atletik. Siswa akan dilatih untuk berkompetisi di tingkat daerah dan nasional.',
             schedule: 'Senin & Kamis, 16:00 - 18:00',
             image: 'https://picsum.photos/seed/sports/800/500.jpg'
@@ -141,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 6,
             name: 'KIR',
             icon: 'fa-users',
+            color: '#06B6D4',
             description: 'KIR (Karya Ilmiah Remaja) adalah kegiatan penelitian dan pengembangan karya ilmiah siswa. Siswa akan belajar tentang metodologi penelitian, presentasi, dan pengembangan kreativitas ilmiah.',
             schedule: 'Selasa & Jumat, 16:00 - 18:00',
             image: 'https://picsum.photos/seed/research/800/500.jpg'
@@ -149,20 +179,123 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 7,
             name: 'Kaligrafi',
             icon: 'fa-pen-fancy',
+            color: '#EC4899',
             description: 'Kaligrafi adalah seni menulis indah dengan berbagai gaya tulisan Arab. Siswa akan belajar tentang seni tulis indah, estetika, dan nilai-nilai keindahan dalam seni Islam.',
             schedule: 'Rabu, 15:00 - 17:00',
             image: 'https://picsum.photos/seed/calligraphy/800/500.jpg'
         },
     ];
     
-    // Gallery data
+    // Gallery data with detailed information
     const galleryData = [
-        { id: 1, image: 'assets/images/galeri.png', title: 'Kegiatan Sekolah 1', category: 'kegiatan' },
-        { id: 2, image: 'assets/images/galeri (1).png', title: 'Kegiatan Sekolah 2', category: 'kegiatan' },
-        { id: 3, image: 'assets/images/galeri (2).png', title: 'Kegiatan Sekolah 3', category: 'kegiatan' },
-        { id: 4, image: 'assets/images/galeri (3).png', title: 'Kegiatan Sekolah 4', category: 'kegiatan' },
-        { id: 5, image: 'assets/images/galeri (4).png', title: 'Kegiatan Sekolah 5', category: 'kegiatan' },
-        { id: 6, image: 'assets/images/galeri (5).png', title: 'Kegiatan Sekolah 6', category: 'kegiatan' }
+        {
+            id: 1,
+            image: 'assets/images/galeri.png',
+            title: 'Kegiatan Sekolah 1',
+            category: 'kegiatan',
+            description: 'Kegiatan pembelajaran di kelas yang interaktif dan menyenangkan.',
+            date: '15 Oktober 2024',
+            location: 'Ruang Kelas 1'
+        },
+        {
+            id: 2,
+            image: 'assets/images/galeri (1).png',
+            title: 'Kegiatan Sekolah 2',
+            category: 'kegiatan',
+            description: 'Sesi diskusi kelompok siswa dalam pembelajaran tematik.',
+            date: '16 Oktober 2024',
+            location: 'Ruang Kelas 2'
+        },
+        {
+            id: 3,
+            image: 'assets/images/galeri (2).png',
+            title: 'Kegiatan Sekolah 3',
+            category: 'kegiatan',
+            description: 'Kegiatan praktikum sains yang menarik perhatian siswa.',
+            date: '17 Oktober 2024',
+            location: 'Laboratorium IPA'
+        },
+        {
+            id: 4,
+            image: 'assets/images/galeri (3).png',
+            title: 'Kegiatan Sekolah 4',
+            category: 'kegiatan',
+            description: 'Presentasi hasil kerja siswa di depan kelas.',
+            date: '18 Oktober 2024',
+            location: 'Aula Sekolah'
+        },
+        {
+            id: 5,
+            image: 'assets/images/galeri (4).png',
+            title: 'Kegiatan Sekolah 5',
+            category: 'kegiatan',
+            description: 'Kegiatan olahraga pagi untuk menjaga kebugaran siswa.',
+            date: '19 Oktober 2024',
+            location: 'Lapangan Olahraga'
+        },
+        {
+            id: 6,
+            image: 'assets/images/galeri (5).png',
+            title: 'Kegiatan Sekolah 6',
+            category: 'kegiatan',
+            description: 'Kegiatan seni dan budaya dalam rangka hari kesenian.',
+            date: '20 Oktober 2024',
+            location: 'Ruang Seni'
+        },
+        {
+            id: 7,
+            image: 'assets/images/kegiatan.png',
+            title: 'Kegiatan Sekolah 7',
+            category: 'kegiatan',
+            description: 'Kegiatan pembelajaran bahasa Inggris interaktif.',
+            date: '21 Oktober 2024',
+            location: 'Ruang Bahasa'
+        },
+        {
+            id: 8,
+            image: 'assets/images/kegiatan (1).png',
+            title: 'Kegiatan Sekolah 8',
+            category: 'kegiatan',
+            description: 'Workshop teknologi informasi untuk siswa.',
+            date: '22 Oktober 2024',
+            location: 'Laboratorium Komputer'
+        },
+        {
+            id: 9,
+            image: 'assets/images/kegiatan (2).png',
+            title: 'Kegiatan Sekolah 9',
+            category: 'kegiatan',
+            description: 'Kegiatan pramuka untuk pengembangan karakter.',
+            date: '23 Oktober 2024',
+            location: 'Halaman Sekolah'
+        },
+        {
+            id: 10,
+            image: 'assets/images/kegiatan (3).png',
+            title: 'Kegiatan Sekolah 10',
+            category: 'kegiatan',
+            description: 'Kegiatan ekstrakurikuler olahraga basket.',
+            date: '24 Oktober 2024',
+            location: 'Lapangan Basket'
+        },
+        {
+            id: 11,
+            image: 'assets/images/kegiatan (4).png',
+            title: 'Kegiatan Sekolah 11',
+            category: 'kegiatan',
+            description: 'Kegiatan pembelajaran matematika kreatif.',
+            date: '25 Oktober 2024',
+            location: 'Ruang Matematika'
+        },
+        {
+            id: 12,
+            image: 'assets/images/kegiatan (5).png',
+            title: 'Kegiatan Sekolah 12',
+            category: 'kegiatan',
+            description: 'Kegiatan study tour ke museum pendidikan.',
+            date: '26 Oktober 2024',
+            location: 'Museum Pendidikan'
+        }
     ];
     
     // Teacher data
@@ -301,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card extracurricular-card h-100" data-extracurricular-id="${extracurricular.id}">
-                    <div class="extracurricular-icon">
+                    <div class="extracurricular-icon" style="background-color: ${extracurricular.color};">
                         <i class="fas ${extracurricular.icon}"></i>
                     </div>
                     <h5 class="extracurricular-title">${extracurricular.name}</h5>
@@ -371,10 +504,44 @@ document.addEventListener('DOMContentLoaded', function() {
         allGalleryContainer.innerHTML = galleryData.map(item => createGalleryItem(item)).join('');
     }
     
-    // Populate home teachers section
+    // Populate home teachers section with updated data
     const homeTeachersContainer = document.getElementById('teachers-container');
     if (homeTeachersContainer) {
-        homeTeachersContainer.innerHTML = teacherData.slice(0, 4).map(teacher => createTeacherCard(teacher)).join('');
+        const updatedTeacherData = [
+            {
+                id: 1,
+                name: 'ABDUL RAZAK,M.A.',
+                position: 'KEPALA MADARASAH',
+                subject: 'NIP. 19005012006041003',
+                type: 'guru',
+                image: 'assets/images/kepala sekolah.png'
+            },
+            {
+                id: 11,
+                name: 'BUDI UTOMO,S.Pd',
+                position: 'WAKIL KEPALA MADARASAH BIDANG KURIKULUM',
+                subject: 'GURU BAHASA INGGRIS',
+                type: 'guru',
+                image: 'assets/images/staf.png'
+            },
+            {
+                id: 12,
+                name: 'SITI ROHMAH,S.PdI',
+                position: 'WAKIL KEPALA MADARASAH BIDANG KESISWAAN',
+                subject: 'GURU BAHASA ARAB',
+                type: 'guru',
+                image: 'assets/images/staf (1).png'
+            },
+            {
+                id: 13,
+                name: 'RUDI EKO YULIANTO,S.Pd',
+                position: 'WAKIL KEPALA MADARASAH BIDANG HUMAS',
+                subject: 'GURU BAHASA INDONESIA',
+                type: 'guru',
+                image: 'assets/images/staf (2).png'
+            }
+        ];
+        homeTeachersContainer.innerHTML = updatedTeacherData.map(teacher => createTeacherCard(teacher)).join('');
     }
     
     // Populate all news section
@@ -500,123 +667,144 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxClose = document.getElementById('lightbox-close');
     const lightboxPrev = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
-    
+
     let currentImageIndex = 0;
     let filteredGalleryData = [...galleryData];
-    
+    let isZoomed = false;
+
     // Add click event to gallery items
     document.addEventListener('click', function(e) {
         const galleryItem = e.target.closest('.gallery-item');
         if (galleryItem) {
             const galleryId = parseInt(galleryItem.getAttribute('data-gallery-id'));
             currentImageIndex = filteredGalleryData.findIndex(item => item.id === galleryId);
-            
+
             if (currentImageIndex !== -1) {
+                // Hide navigation buttons for single image view
+                lightboxPrev.style.display = 'none';
+                lightboxNext.style.display = 'none';
                 updateLightbox();
                 lightbox.classList.add('active');
+                isZoomed = false;
+                lightboxImage.classList.remove('zoomed');
             }
         }
     });
-    
+
     // Update lightbox image
     function updateLightbox() {
         const currentItem = filteredGalleryData[currentImageIndex];
         lightboxImage.src = currentItem.image;
         lightboxImage.alt = currentItem.title;
         lightboxCaption.textContent = currentItem.title;
+
+        // Update details
+        const detailDate = document.getElementById('detail-date');
+        const detailLocation = document.getElementById('detail-location');
+        const detailDescription = document.getElementById('detail-description');
+
+        if (detailDate && currentItem.date) {
+            detailDate.textContent = currentItem.date;
+        }
+        if (detailLocation && currentItem.location) {
+            detailLocation.textContent = `Lokasi: ${currentItem.location}`;
+        }
+        if (detailDescription && currentItem.description) {
+            detailDescription.textContent = currentItem.description;
+        }
+
+        isZoomed = false;
+        lightboxImage.classList.remove('zoomed');
     }
-    
+
     // Close lightbox
     lightboxClose.addEventListener('click', function() {
         lightbox.classList.remove('active');
+        isZoomed = false;
+        lightboxImage.classList.remove('zoomed');
+        // Show navigation buttons again when closing
+        lightboxPrev.style.display = 'flex';
+        lightboxNext.style.display = 'flex';
     });
-    
+
     lightbox.addEventListener('click', function(e) {
         if (e.target === lightbox) {
             lightbox.classList.remove('active');
+            isZoomed = false;
+            lightboxImage.classList.remove('zoomed');
+            // Show navigation buttons again when closing
+            lightboxPrev.style.display = 'flex';
+            lightboxNext.style.display = 'flex';
         }
     });
-    
-    // Navigate lightbox images
-    lightboxPrev.addEventListener('click', function() {
-        currentImageIndex = (currentImageIndex - 1 + filteredGalleryData.length) % filteredGalleryData.length;
-        updateLightbox();
+
+    // Zoom functionality
+    lightboxImage.addEventListener('click', function() {
+        isZoomed = !isZoomed;
+        if (isZoomed) {
+            lightboxImage.classList.add('zoomed');
+        } else {
+            lightboxImage.classList.remove('zoomed');
+        }
     });
+
+    // Keyboard controls - disabled for single image view
+    // document.addEventListener('keydown', function(e) {
+    //     if (!lightbox.classList.contains('active')) return;
+
+    //     switch(e.key) {
+    //         case 'Escape':
+    //             lightbox.classList.remove('active');
+    //             isZoomed = false;
+    //             lightboxImage.classList.remove('zoomed');
+    //             break;
+    //         case 'ArrowLeft':
+    //             e.preventDefault();
+    //             currentImageIndex = (currentImageIndex - 1 + filteredGalleryData.length) % filteredGalleryData.length;
+    //             updateLightbox();
+    //             break;
+    //         case 'ArrowRight':
+    //             e.preventDefault();
+    //             currentImageIndex = (currentImageIndex + 1) % filteredGalleryData.length;
+    //             updateLightbox();
+    //             break;
+    //         case ' ':
+    //         case 'Enter':
+    //             e.preventDefault();
+    //             isZoomed = !isZoomed;
+    //             if (isZoomed) {
+    //                 lightboxImage.classList.add('zoomed');
+    //             } else {
+    //                 lightboxImage.classList.remove('zoomed');
+    //             }
+    //             break;
+    //     }
+    // });
+
+    // Navigate lightbox images - disabled for single image view
+    // lightboxPrev.addEventListener('click', function() {
+    //     currentImageIndex = (currentImageIndex - 1 + filteredGalleryData.length) % filteredGalleryData.length;
+    //     updateLightbox();
+    // });
+
+    // lightboxNext.addEventListener('click', function() {
+    //     currentImageIndex = (currentImageIndex + 1) % filteredGalleryData.length;
+    //     updateLightbox();
+    // });
+
+    // Touch/swipe support disabled for single image view
     
-    lightboxNext.addEventListener('click', function() {
-        currentImageIndex = (currentImageIndex + 1) % filteredGalleryData.length;
-        updateLightbox();
-    });
-    
-    // Gallery filter functionality
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter gallery items
-            const filter = this.getAttribute('data-filter');
-            const galleryItems = document.querySelectorAll('.gallery-item-container');
-            
-            if (filter === 'all') {
-                filteredGalleryData = [...galleryData];
-                galleryItems.forEach(item => {
-                    item.style.display = 'block';
-                });
-            } else {
-                filteredGalleryData = galleryData.filter(item => item.category === filter);
-                galleryItems.forEach(item => {
-                    if (item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-    });
-    
-    // Teacher filter functionality
-    const teacherFilterButtons = document.querySelectorAll('.teacher-filter-btn');
-    teacherFilterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Update active button
-            teacherFilterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter teacher items
-            const filter = this.getAttribute('data-filter');
-            const teacherItems = document.querySelectorAll('.teacher-container');
-            
-            if (filter === 'all') {
-                teacherItems.forEach(item => {
-                    item.style.display = 'block';
-                });
-            } else {
-                teacherItems.forEach(item => {
-                    if (item.getAttribute('data-type') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-    });
     
     // News search functionality
     const newsSearch = document.getElementById('news-search');
     const searchBtn = document.getElementById('search-btn');
-    
+
     function filterNews() {
-        const searchTerm = newsSearch.value.toLowerCase();
-        const filteredNews = newsData.filter(news => 
-            news.title.toLowerCase().includes(searchTerm) || 
-            news.excerpt.toLowerCase().includes(searchTerm)
+        const searchTerm = newsSearch.value.toLowerCase().trim();
+        const filteredNews = newsData.filter(news =>
+            news.title.toLowerCase().includes(searchTerm)
         );
-        
+
         if (allNewsContainer) {
             if (filteredNews.length > 0) {
                 allNewsContainer.innerHTML = filteredNews.map(news => createNewsCard(news)).join('');
@@ -625,12 +813,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     if (searchBtn) {
         searchBtn.addEventListener('click', filterNews);
     }
-    
+
     if (newsSearch) {
+        newsSearch.addEventListener('input', filterNews);
         newsSearch.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
                 filterNews();

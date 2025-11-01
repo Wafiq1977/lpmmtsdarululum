@@ -11,8 +11,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts - Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Poppins and Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -30,8 +30,11 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-content">
-            <div class="spinner"></div>
-            <p>Memuat...</p>
+            <div class="preloader-logo">
+                <img src="assets/images/logo (1).png" alt="Logo Sekolah">
+            </div>
+            <p class="preloader-text">LPM MTS DARUL ULUM</p>
+            <p class="preloader-subtitle">Memuat halaman...</p>
         </div>
     </div>
     
@@ -83,50 +86,14 @@
                     <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url('assets/images/foto (1).png')">
                         <div class="hero-overlay">
-                            <div class="container h-100">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col-lg-8">
-                                        <h1 class="hero-title" data-aos="fade-up">Selamat Datang di Website Resmi LPM MTS DARUL ULUM</h1>
-                                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Mencetak generasi unggul yang berkarakter, berprestasi, dan berwawasan global</p>
-                                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                                            <a href="profil.html" class="btn btn-primary btn-lg me-3">Lihat Profil Sekolah</a>
-                                            <a href="kontak.html" class="btn btn-outline-light btn-lg">Hubungi Kami</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide" style="background-image: url('assets/images/foto (2).png')">
                         <div class="hero-overlay">
-                            <div class="container h-100">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col-lg-8">
-                                        <h1 class="hero-title" data-aos="fade-up">Prestasi Gemilang Siswa-Siswi Kami</h1>
-                                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Berbagai juara di tingkat nasional dan internasional telah diraih</p>
-                                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                                            <a href="berita.html" class="btn btn-primary btn-lg me-3">Lihat Berita</a>
-                                            <a href="galeri.html" class="btn btn-outline-light btn-lg">Galeri Foto</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide" style="background-image: url('assets/images/foto (3).png')">
                         <div class="hero-overlay">
-                            <div class="container h-100">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col-lg-8">
-                                        <h1 class="hero-title" data-aos="fade-up">Fasilitas Modern dan Lengkap</h1>
-                                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Laboratorium, perpustakaan, dan sarana penunjang pembelajaran lainnya</p>
-                                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
-                                            <a href="profil.html#fasilitas" class="btn btn-primary btn-lg me-3">Lihat Fasilitas</a>
-                                            <a href="kontak.html" class="btn btn-outline-light btn-lg">Kunjungi Kami</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,9 +109,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right">
                         <div class="text-center">
-                            <img src="https://picsum.photos/seed/principal/400/400.jpg" alt="Kepala Sekolah" class="img-fluid rounded-circle shadow-lg mb-4">
-                            <h4>Dr. Ahmad Wijaya, M.Pd.</h4>
-                            <p class="text-muted">Kepala Sekolah</p>
+                            <img src="assets/images/kepala sekolah.png" alt="Kepala Sekolah" class="img-fluid rounded-circle shadow-lg mb-4">
+                            <h4>ABDUL RAZAK, M.A.</h4>
+                            <p class="text-muted">Kepala Sekolah<br>NIP. 19005012006041003</p>
                         </div>
                     </div>
                     <div class="col-lg-8" data-aos="fade-left">
@@ -158,8 +125,7 @@
                             <p>Terima kasih atas kepercayaan dan dukungan Anda kepada LPM MTS DARUL ULUM.</p>
                             <p class="mt-3">Wassalamu'alaikum Warahmatullahi Wabarakatuh,</p>
                             <div class="mt-3">
-                                <img src="https://picsum.photos/seed/signature/200/80.jpg" alt="Tanda Tangan" class="img-fluid" style="max-width: 200px;">
-                                <p class="fw-bold mt-2">Dr. Ahmad Wijaya, M.Pd.</p>
+                                <p class="fw-bold mt-2">ABDUL RAZAK, M.A.</p>
                             </div>
                         </div>
                     </div>
@@ -268,21 +234,37 @@
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
                             <div class="ratio ratio-16x9">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.2348563117145!2d106.82356131476564!3d-6.368829795415699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed1f4d1c7c9f%3A0x8c5e5d5f5f5f5f5f!2sSMAN%20Harapan%20Bangsa!5e0!3m2!1sen!2sid!4v1623456789012!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
+                                <iframe src="https://maps.app.goo.gl/aFEvPhyy7tQB89U77" allowfullscreen="" loading="lazy"></iframe>
                             </div>
                             <div class="p-4">
                                 <h4 class="mb-3">Informasi Kontak</h4>
                                 <div class="contact-item mb-3">
                                     <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                    <span>Jl. Pendidikan No. 123, Kecamatan Sukmajaya, Kota Depok, Jawa Barat 16412</span>
-                                </div>
-                                <div class="contact-item mb-3">
-                                    <i class="fas fa-phone text-primary me-3"></i>
-                                    <span>(021) 1234567</span>
+                                    <span>Alamat Madrasah: JL Raya Kepohbaru-Baureno Desa Nglumber Kec.Kepohbaru Kab.Bojonegoro</span>
                                 </div>
                                 <div class="contact-item mb-3">
                                     <i class="fas fa-envelope text-primary me-3"></i>
-                                    <span>info@lpmtsdarululum.sch.id</span>
+                                    <span>Email Sekolah: mtsdunglumber@gmail.com</span>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-envelope text-primary me-3"></i>
+                                    <span>Email Lembaga: lpmdarululum.kepohbaru@gmail.com</span>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-phone text-primary me-3"></i>
+                                    <span>No Telepon Sekolah: +62 852 5893 2028</span>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fab fa-instagram text-primary me-3"></i>
+                                    <span>Instagram: lpmnudarululum.kepohbaru</span>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fab fa-youtube text-primary me-3"></i>
+                                    <span>YouTube: Darul Ulum Kepohbaru</span>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fab fa-facebook text-primary me-3"></i>
+                                    <span>Facebook: lpm-NU Darul Ulum Kepohbaru</span>
                                 </div>
                                 <div class="contact-item mb-3">
                                     <i class="fas fa-clock text-primary me-3"></i>
@@ -291,51 +273,58 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">LPM MTS DARUL ULUM</h5>
-                    <p class="mb-3">Menciptakan generasi unggul yang berkarakter, berprestasi, dan berwawasan global untuk masa depan Indonesia yang lebih baik.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="social-link me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="social-link me-3"><i class="fab fa-youtube fa-lg"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter fa-lg"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">Tautan Cepat</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="footer-link">Beranda</a></li>
-                        <li class="mb-2"><a href="profil.html" class="footer-link">Profil</a></li>
-                        <li class="mb-2"><a href="berita.html" class="footer-link">Berita</a></li>
-                        <li class="mb-2"><a href="galeri.html" class="footer-link">Galeri</a></li>
-                        <li class="mb-2"><a href="ekstrakurikuler.html" class="footer-link">Ekstrakurikuler</a></li>
-                        <li class="mb-2"><a href="guru.html" class="footer-link">Guru & Staf</a></li>
-                        <li class="mb-2"><a href="kontak.html" class="footer-link">Kontak</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h5 class="fw-bold mb-3">Kontak</h5>
-                    <div class="contact-item mb-2">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        <span>Jl. Pendidikan No. 123, Depok</span>
-                    </div>
-                    <div class="contact-item mb-2">
-                        <i class="fas fa-phone me-2"></i>
-                        <span>(021) 1234567</span>
-                    </div>
-                    <div class="contact-item mb-2">
-                        <i class="fas fa-envelope me-2"></i>
-                        <span>info@lpmtsdarululum.sch.id</span>
-                    </div>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold mb-3">LPM MTS DARUL ULUM</h5>
+                <p class="mb-3">Menciptakan generasi unggul yang berkarakter, berprestasi, dan berwawasan global untuk masa depan Indonesia yang lebih baik.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="social-link me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="social-link me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter fa-lg"></i></a>
                 </div>
             </div>
-            <div class="border-top pt-4 mt-4 text-center">
-                <p class="mb-0">&copy; <span id="current-year"></span> LPM MTS DARUL ULUM. Hak Cipta Dilindungi.</p>
+            <div class="col-lg-4">
+                <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="footer-link">Beranda</a></li>
+                    <li class="mb-2"><a href="profil.html" class="footer-link">Profil</a></li>
+                    <li class="mb-2"><a href="berita.html" class="footer-link">Berita</a></li>
+                    <li class="mb-2"><a href="galeri.html" class="footer-link">Galeri</a></li>
+                    <li class="mb-2"><a href="ekstrakurikuler.html" class="footer-link">Ekstrakurikuler</a></li>
+                    <li class="mb-2"><a href="guru.html" class="footer-link">Guru & Staf</a></li>
+                    <li class="mb-2"><a href="kontak.html" class="footer-link">Kontak</a></li>
+                </ul>
             </div>
+            <div class="col-lg-4">
+                <h5 class="fw-bold mb-3">Kontak</h5>
+                <div class="contact-item mb-2">
+                    <i class="fas fa-map-marker-alt me-2"></i>
+                    <span>JL Raya Kepohbaru-Baureno Desa Nglumber Kec.Kepohbaru Kab.Bojonegoro</span>
+                </div>
+                <div class="contact-item mb-2">
+                    <i class="fas fa-phone me-2"></i>
+                    <span>+62 852 5893 2028</span>
+                </div>
+                <div class="contact-item mb-2">
+                    <i class="fas fa-envelope me-2"></i>
+                    <span>mtsdunglumber@gmail.com</span>
+                </div>
+                <div class="contact-item mb-2">
+                    <i class="fas fa-envelope me-2"></i>
+                    <span>lpmdarululum.kepohbaru@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="border-top pt-4 mt-4 text-center">
+            <p class="mb-0">&copy; <span id="current-year"></span> LPM MTS DARUL ULUM. Hak Cipta Dilindungi.</p>
         </div>
     </footer>
 <!-- Back to Top Button -->

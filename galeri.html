@@ -27,8 +27,11 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-content">
-            <div class="spinner"></div>
-            <p>Memuat...</p>
+            <div class="preloader-logo">
+                <img src="assets/images/logo (1).png" alt="Logo Sekolah">
+            </div>
+            <p class="preloader-text">LPM MTS DARUL ULUM</p>
+            <p class="preloader-subtitle">Memuat halaman...</p>
         </div>
     </div>
 
@@ -86,18 +89,6 @@
             </div>
         </section>
 
-        <!-- Filter Buttons -->
-        <section class="py-4">
-            <div class="container">
-                <div class="text-center">
-                    <button class="btn btn-outline-primary filter-btn active me-2 mb-2" data-filter="all">Semua</button>
-                    <button class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="kegiatan">Kegiatan</button>
-                    <button class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="lomba">Lomba</button>
-                    <button class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="fasilitas">Fasilitas</button>
-                    <button class="btn btn-outline-primary filter-btn mb-2" data-filter="upacara">Upacara</button>
-                </div>
-            </div>
-        </section>
 
         <!-- Gallery Grid -->
         <section class="py-5">
@@ -115,6 +106,14 @@
             <img src="" alt="" id="lightbox-image">
             <button class="lightbox-close" id="lightbox-close">&times;</button>
             <div class="lightbox-caption" id="lightbox-caption"></div>
+            <div class="lightbox-details" id="lightbox-details">
+                <div class="detail-date" id="detail-date"></div>
+                <div class="detail-location" id="detail-location"></div>
+                <div class="detail-description" id="detail-description"></div>
+            </div>
+            <div class="zoom-indicator">
+                <i class="fas fa-search-plus"></i> Klik untuk zoom
+            </div>
             <button class="lightbox-prev" id="lightbox-prev">
                 <i class="fas fa-chevron-left"></i>
             </button>
@@ -154,15 +153,19 @@
                     <h5 class="fw-bold mb-3">Kontak</h5>
                     <div class="contact-item mb-2">
                         <i class="fas fa-map-marker-alt me-2"></i>
-                        <span>Jl. Pendidikan No. 123, Depok</span>
+                        <span>JL Raya Kepohbaru-Baureno Desa Nglumber Kec.Kepohbaru Kab.Bojonegoro</span>
                     </div>
                     <div class="contact-item mb-2">
                         <i class="fas fa-phone me-2"></i>
-                        <span>(021) 1234567</span>
+                        <span>+62 852 5893 2028</span>
                     </div>
                     <div class="contact-item mb-2">
                         <i class="fas fa-envelope me-2"></i>
-                        <span>info@smanharapanbangsa.sch.id</span>
+                        <span>mtsdunglumber@gmail.com</span>
+                    </div>
+                    <div class="contact-item mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>lpmdarululum.kepohbaru@gmail.com</span>
                     </div>
                 </div>
             </div>

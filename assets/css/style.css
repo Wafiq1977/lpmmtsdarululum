@@ -25,6 +25,19 @@ body {
     overflow-x: hidden;
 }
 
+/* Container adjustments for better responsiveness */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+
 /* Preloader */
 #preloader {
     position: fixed;
@@ -48,20 +61,62 @@ body {
 .preloader-content {
     text-align: center;
     color: var(--white);
+    position: relative;
 }
 
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+.preloader-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
     border-radius: 50%;
-    border-top-color: var(--white);
-    animation: spin 1s ease-in-out infinite;
-    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(20px);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+.preloader-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.preloader-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    animation: textFade 2s ease-in-out infinite;
+}
+
+.preloader-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    animation: textFade 2s ease-in-out infinite 0.5s;
 }
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@keyframes textFade {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
 }
 
 /* Header & Navbar */
@@ -72,6 +127,24 @@ body {
     width: 100%;
     z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        margin-top: 1rem;
+    }
+
+    .navbar.scrolled .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.98);
+    }
 }
 
 .navbar {
@@ -109,6 +182,7 @@ body {
 .school-name {
     font-size: 1.2rem;
     font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-nav .nav-link {
@@ -147,6 +221,7 @@ body {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    min-height: 500px;
 }
 
 .heroSwiper {
@@ -309,9 +384,16 @@ body {
 
 .extracurricular-icon {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: var(--white);
     margin-bottom: 1rem;
     transition: color 0.3s ease;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
 }
 
 .extracurricular-title {
@@ -370,7 +452,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,6 +460,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .lightbox.active {
@@ -387,34 +470,91 @@ body {
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lightbox-content img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.lightbox-content img.zoomed {
+    transform: scale(1.5);
+    cursor: zoom-out;
 }
 
 .lightbox-close {
     position: absolute;
-    top: -40px;
+    top: -50px;
     right: 0;
     color: var(--white);
-    font-size: 2rem;
+    font-size: 2.5rem;
     background: none;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .lightbox-caption {
     position: absolute;
-    bottom: -30px;
+    bottom: -80px;
     left: 0;
     width: 100%;
     text-align: center;
     color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-details {
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px 20px;
+    max-width: 400px;
+    text-align: center;
+    color: var(--white);
+    font-size: 0.9rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-details .detail-date {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.lightbox-details .detail-location {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.lightbox-details .detail-description {
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .lightbox-prev, .lightbox-next {
@@ -422,29 +562,49 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: var(--white);
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    background: rgba(0, 0, 0, 0.7);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .lightbox-prev:hover, .lightbox-next:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .lightbox-prev {
-    left: -70px;
+    left: -80px;
 }
 
 .lightbox-next {
-    right: -70px;
+    right: -80px;
+}
+
+/* Zoom indicator */
+.zoom-indicator {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox:hover .zoom-indicator {
+    opacity: 1;
 }
 
 /* Teacher Cards */
@@ -461,12 +621,14 @@ body {
 }
 
 .teacher-card img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
     border: 3px solid var(--primary-color);
+    margin: 0 auto 1rem;
+    display: block;
 }
 
 .teacher-name {
@@ -502,15 +664,19 @@ body {
     width: 120px;
     height: 120px;
     object-fit: cover;
+    border-radius: 50%;
     border: 3px solid var(--primary-color);
     margin-bottom: 10px;
+    margin: 0 auto 10px;
+    display: block;
 }
 
 .org-children {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 /* Contact Form */
@@ -533,7 +699,10 @@ body {
 .footer {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: var(--white);
-    padding: 50px 0 20px;
+    padding: 50px 15px 20px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
 }
 
 /* Make footer content full width left and right */
@@ -543,8 +712,8 @@ body {
 }
 
 .footer .col-lg-4 {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .footer-link {
@@ -605,34 +774,240 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .school-name {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .page-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .school-name {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons .btn {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .extracurricular-icon {
+        width: 60px;
+        height: 60px;
         font-size: 2rem;
     }
-    
+
+    .extracurricular-title {
+        font-size: 1rem;
+    }
+
+    .teacher-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .org-item img {
+        width: 100px;
+        height: 100px;
+    }
+
     .org-children {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
-    
+
     .org-item {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
-    
+
     .lightbox-prev {
         left: 10px;
     }
-    
+
     .lightbox-next {
         right: 10px;
+    }
+
+    .footer .col-lg-4 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .school-name {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0 3px;
+        font-size: 0.8rem;
+    }
+
+    .hero-buttons .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .extracurricular-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .extracurricular-title {
+        font-size: 0.9rem;
+    }
+
+    .teacher-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .org-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .contact-item {
+        font-size: 0.9rem;
+    }
+
+    .footer-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .page-title {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .school-name {
+        font-size: 0.7rem;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .extracurricular-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .teacher-card img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .org-item img {
+        width: 70px;
+        height: 70px;
     }
 }
 

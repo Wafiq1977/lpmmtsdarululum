@@ -27,8 +27,11 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-content">
-            <div class="spinner"></div>
-            <p>Memuat...</p>
+            <div class="preloader-logo">
+                <img src="assets/images/logo (1).png" alt="Logo Sekolah">
+            </div>
+            <p class="preloader-text">LPM MTS DARUL ULUM</p>
+            <p class="preloader-subtitle">Memuat halaman...</p>
         </div>
     </div>
 
@@ -86,17 +89,6 @@
             </div>
         </section>
 
-        <!-- Teacher Filter -->
-        <section class="py-4">
-            <div class="container">
-                <div class="text-center">
-                    <button class="btn btn-outline-primary teacher-filter-btn active me-2 mb-2" data-filter="all">Semua</button>
-                    <button class="btn btn-outline-primary teacher-filter-btn me-2 mb-2" data-filter="guru">Guru</button>
-                    <button class="btn btn-outline-primary teacher-filter-btn me-2 mb-2" data-filter="staff">Staf</button>
-                    <button class="btn btn-outline-primary teacher-filter-btn mb-2" data-filter="admin">Administrasi</button>
-                </div>
-            </div>
-        </section>
 
         <!-- Teacher Grid -->
         <section class="py-5">
@@ -104,31 +96,121 @@
                 <div class="row g-4" id="all-teachers-container">
                     <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
                         <div class="card teacher-card h-100" data-teacher-id="1">
-                            <img src="https://picsum.photos/seed/teacher1/300/300.jpg" class="card-img-top" alt="Dr. Ahmad Wijaya, M.Pd.">
+                            <img src="assets/images/kepala sekolah.png" class="card-img-top" alt="ABDUL RAZAK,M.A.">
                             <div class="card-body">
-                                <h5 class="teacher-name">Dr. Ahmad Wijaya, M.Pd.</h5>
-                                <p class="teacher-position">Kepala Sekolah</p>
-                                <p class="teacher-subject">Manajemen Pendidikan</p>
+                                <h5 class="teacher-name">ABDUL RAZAK,M.A.</h5>
+                                <p class="teacher-position">KEPALA MADARASAH</p>
+                                <p class="teacher-subject">NIP. 19005012006041003</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
-                        <div class="card teacher-card h-100" data-teacher-id="2">
-                            <img src="https://picsum.photos/seed/teacher2/300/300.jpg" class="card-img-top" alt="Drs. Budi Santoso">
+                        <div class="card teacher-card h-100" data-teacher-id="11">
+                            <img src="assets/images/staf.png" class="card-img-top" alt="BUDI UTOMO,S.Pd">
                             <div class="card-body">
-                                <h5 class="teacher-name">Drs. Budi Santoso</h5>
-                                <p class="teacher-position">Wakil Kepala Sekolah Bidang Kurikulum</p>
-                                <p class="teacher-subject">Matematika</p>
+                                <h5 class="teacher-name">BUDI UTOMO,S.Pd</h5>
+                                <p class="teacher-position">WAKIL KEPALA MADARASAH BIDANG KURIKULUM</p>
+                                <p class="teacher-subject">GURU BAHASA INGGRIS</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="staff">
-                        <div class="card teacher-card h-100" data-teacher-id="9">
-                            <img src="https://picsum.photos/seed/staff1/300/300.jpg" class="card-img-top" alt="Bambang Sutrisno">
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="12">
+                            <img src="assets/images/staf (1).png" class="card-img-top" alt="SITI ROHMAH,S.PdI">
                             <div class="card-body">
-                                <h5 class="teacher-name">Bambang Sutrisno</h5>
-                                <p class="teacher-position">Staf Administrasi</p>
-                                <p class="teacher-subject">Administrasi</p>
+                                <h5 class="teacher-name">SITI ROHMAH,S.PdI</h5>
+                                <p class="teacher-position">WAKIL KEPALA MADARASAH BIDANG KESISWAAN</p>
+                                <p class="teacher-subject">GURU BAHASA ARAB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="13">
+                            <img src="assets/images/staf (2).png" class="card-img-top" alt="RUDI EKO YULIANTO,S.Pd">
+                            <div class="card-body">
+                                <h5 class="teacher-name">RUDI EKO YULIANTO,S.Pd</h5>
+                                <p class="teacher-position">WAKIL KEPALA MADARASAH BIDANG HUMAS</p>
+                                <p class="teacher-subject">GURU BAHASA INDONESIA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="14">
+                            <img src="assets/images/staf (3).png" class="card-img-top" alt="MUHAIMIN,S.Pd">
+                            <div class="card-body">
+                                <h5 class="teacher-name">MUHAIMIN,S.Pd</h5>
+                                <p class="teacher-position">WAKIL KEPALA MADARASAH BIDANG SARPRAS</p>
+                                <p class="teacher-subject">GURU PENDIDIKAN OLAHRAGA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="15">
+                            <img src="assets/images/staf (4).png" class="card-img-top" alt="LAILATUL MAGHFIROH,S.Pd">
+                            <div class="card-body">
+                                <h5 class="teacher-name">LAILATUL MAGHFIROH,S.Pd</h5>
+                                <p class="teacher-position">KEPALA LABORATORIUM</p>
+                                <p class="teacher-subject">GURU TIK</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="16">
+                            <img src="assets/images/staf (5).png" class="card-img-top" alt="APRILIANTO ALFI NORKIJAH,S.PdI">
+                            <div class="card-body">
+                                <h5 class="teacher-name">APRILIANTO ALFI NORKIJAH,S.PdI</h5>
+                                <p class="teacher-position">KEPALA LABORATORIUM KOMPUTER</p>
+                                <p class="teacher-subject">GURU AQIDAH AKHLAK</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="17">
+                            <img src="assets/images/staf (6).png" class="card-img-top" alt="KHUSNUL AZUZAH.S.SOS.I">
+                            <div class="card-body">
+                                <h5 class="teacher-name">KHUSNUL AZUZAH.S.SOS.I</h5>
+                                <p class="teacher-position">KEPALA PERPUSTAKAAN</p>
+                                <p class="teacher-subject">GURU AL QUR'AN HADITS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="18">
+                            <img src="assets/images/staf (7).png" class="card-img-top" alt="M.WAWAN S.Pd">
+                            <div class="card-body">
+                                <h5 class="teacher-name">M.WAWAN S.Pd</h5>
+                                <p class="teacher-position">KEPALA TATA USAHA</p>
+                                <p class="teacher-subject">GURU BAHASA INGGRIS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="19">
+                            <img src="assets/images/staf (8).png" class="card-img-top" alt="NINIK PUJI LESTARI,S.Pd">
+                            <div class="card-body">
+                                <h5 class="teacher-name">NINIK PUJI LESTARI,S.Pd</h5>
+                                <p class="teacher-position">BENDAHARA MADRASAH</p>
+                                <p class="teacher-subject">GURU MATEMATIKA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="20">
+                            <img src="assets/images/staf (9).png" class="card-img-top" alt="ANIS SUGIARTI,S.PdI">
+                            <div class="card-body">
+                                <h5 class="teacher-name">ANIS SUGIARTI,S.PdI</h5>
+                                <p class="teacher-position">WALI KELAS</p>
+                                <p class="teacher-subject">GURU SEJARAH KEBUDAYAAN ISLAM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 teacher-container" data-type="guru">
+                        <div class="card teacher-card h-100" data-teacher-id="21">
+                            <img src="assets/images/staf (10).png" class="card-img-top" alt="AYU PERMATA ARISTARIA,S.Pd">
+                            <div class="card-body">
+                                <h5 class="teacher-name">AYU PERMATA ARISTARIA,S.Pd</h5>
+                                <p class="teacher-position">STAF TATA USAHA</p>
+                                <p class="teacher-subject">GURU IPA</p>
                             </div>
                         </div>
                     </div>
@@ -185,15 +267,19 @@
                     <h5 class="fw-bold mb-3">Kontak</h5>
                     <div class="contact-item mb-2">
                         <i class="fas fa-map-marker-alt me-2"></i>
-                        <span>Jl. Pendidikan No. 123, Depok</span>
+                        <span>JL Raya Kepohbaru-Baureno Desa Nglumber Kec.Kepohbaru Kab.Bojonegoro</span>
                     </div>
                     <div class="contact-item mb-2">
                         <i class="fas fa-phone me-2"></i>
-                        <span>(021) 1234567</span>
+                        <span>+62 852 5893 2028</span>
                     </div>
                     <div class="contact-item mb-2">
                         <i class="fas fa-envelope me-2"></i>
-                        <span>info@smanharapanbangsa.sch.id</span>
+                        <span>mtsdunglumber@gmail.com</span>
+                    </div>
+                    <div class="contact-item mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>lpmdarululum.kepohbaru@gmail.com</span>
                     </div>
                 </div>
             </div>
