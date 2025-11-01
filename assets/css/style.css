@@ -58,14 +58,20 @@ body {
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .heroSwiper {
         width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .heroSwiper .swiper-slide {
         width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -356,7 +362,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-overlay {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
         align-items: center;
         justify-content: center;
     }
@@ -364,7 +370,7 @@ body {
 
 @media (max-width: 576px) {
     .hero-overlay {
-        padding: 1rem;
+        padding: 1rem 0.75rem;
         align-items: center;
         justify-content: center;
     }
@@ -372,7 +378,7 @@ body {
 
 @media (max-width: 480px) {
     .hero-overlay {
-        padding: 0.75rem;
+        padding: 0.75rem 0.5rem;
         align-items: center;
         justify-content: center;
     }
@@ -992,7 +998,7 @@ body {
     }
 
     .school-name {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .logo {
@@ -1107,7 +1113,7 @@ body {
     }
 
     .school-name {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .logo {
@@ -1223,7 +1229,7 @@ body {
     }
 
     .school-name {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .logo {
