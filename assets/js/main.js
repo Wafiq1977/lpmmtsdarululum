@@ -24,13 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             navbar.classList.remove('scrolled');
         }
-        
+
         // Show/hide back to top button
         const backToTop = document.getElementById('back-to-top');
         if (window.scrollY > 300) {
             backToTop.classList.add('show');
         } else {
             backToTop.classList.remove('show');
+        }
+    });
+
+    // Mobile menu overlay click to close
+    document.addEventListener('click', function(e) {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            // Close menu when clicking overlay
+            if (e.target === navbarCollapse || e.target === navbarCollapse.querySelector('::before')) {
+                navbarToggler.click();
+            }
         }
     });
     

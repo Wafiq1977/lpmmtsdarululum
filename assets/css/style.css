@@ -186,11 +186,24 @@ body {
 
 @media (max-width: 991px) {
     .navbar-collapse {
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 1rem;
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        margin-top: 1rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: #FFFFFF;
+        backdrop-filter: none;
+        padding: 5rem 1rem 1rem;
+        border-radius: 0;
+        margin-top: 0;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        transition: right 0.3s ease;
+        z-index: 1050;
+        overflow-y: auto;
+    }
+
+    .navbar-collapse.show {
+        right: 0;
     }
 
     .navbar.scrolled .navbar-collapse {
@@ -215,12 +228,39 @@ body {
     align-items: center;
     font-weight: 600;
     color: var(--white) !important;
-    transition: color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFD700 50%, #00A86B 100%);
+    transition: left 1.5s ease;
+    z-index: -1;
+}
+
+.navbar-brand:hover::before {
+    left: 100%;
+}
+
+.navbar-brand:hover {
+    color: #FFD700 !important;
+    transform: translateY(-1px);
 }
 
 .navbar.scrolled .navbar-brand {
     color: var(--primary-color) !important;
+}
+
+.navbar.scrolled .navbar-brand:hover {
+    color: var(--accent-color) !important;
 }
 
 .logo {
@@ -233,11 +273,13 @@ body {
 }
 
 .school-name {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     white-space: nowrap;
     letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar-nav {
@@ -447,8 +489,28 @@ body {
 .page-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--white);
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 25%, #FF8C00 50%, #FFD700 75%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    transition: left 2s ease;
+}
+
+.page-title:hover::before {
+    left: 100%;
 }
 
 .page-subtitle {
@@ -1062,32 +1124,58 @@ body {
     .navbar-toggler {
         border: none;
         padding: 0.5rem;
-        background: rgba(255, 255, 255, 0.9);
+        background: linear-gradient(135deg, #00A86B 0%, #FFD700 100%);
         backdrop-filter: blur(10px);
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 168, 107, 0.3);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        z-index: 1060;
+        overflow: hidden;
+    }
+
+    .navbar-toggler::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .navbar-toggler:hover::before {
+        left: 100%;
     }
 
     .navbar-toggler:hover {
-        background: rgba(255, 255, 255, 1);
-        transform: scale(1.05);
+        background: linear-gradient(135deg, #007A4D 0%, #FFA500 100%);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 8px 30px rgba(0, 168, 107, 0.4);
+    }
+
+    .navbar-toggler:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 2px 10px rgba(0, 168, 107, 0.3);
     }
 
     .navbar-toggler:focus {
-        box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.3);
+        box-shadow: 0 0 0 4px rgba(0, 168, 107, 0.4), 0 4px 20px rgba(0, 168, 107, 0.3);
         outline: none;
     }
 
     .navbar-toggler-icon {
         width: 1.2em;
         height: 1.2em;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 168, 107, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        transform: rotate(90deg);
     }
 
     .navbar-collapse.show {
@@ -1152,6 +1240,12 @@ body {
         height: 80px;
     }
 
+    /* Perbesar foto kepala sekolah di halaman beranda */
+    img[alt="Kepala Sekolah"] {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
     .card {
         margin-bottom: 1rem;
     }
@@ -1170,22 +1264,32 @@ body {
     }
 
     .navbar-collapse {
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #FFFFFF;
+        backdrop-filter: none;
+        border-radius: 0;
+        padding: 5rem 1rem 1rem;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        border: none;
+        transition: right 0.3s ease;
+        z-index: 1050;
+        overflow-y: auto;
+    }
+
+    .navbar-collapse.show {
         right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(15px);
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        padding: 1rem 0;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .navbar-nav {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .navbar-nav .nav-link {
@@ -1194,20 +1298,93 @@ body {
         width: 100%;
         text-align: center;
         border-radius: var(--border-radius);
-        color: var(--text-color) !important;
+        color: #000000 !important;
         font-weight: 600;
         transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .navbar-nav .nav-link:hover::before {
+        left: 100%;
+    }
+
+    .navbar-nav .nav-link:nth-child(1) {
+        background: linear-gradient(135deg, #00A86B 0%, #FFD700 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(2) {
+        background: linear-gradient(135deg, #007A4D 0%, #FFA500 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(3) {
+        background: linear-gradient(135deg, #00A86B 0%, #FF8C00 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(4) {
+        background: linear-gradient(135deg, #A8E6CF 0%, #FFD700 100%);
+        color: #333 !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(5) {
+        background: linear-gradient(135deg, #00A86B 0%, #B8860B 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(6) {
+        background: linear-gradient(135deg, #007A4D 0%, #FFD700 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(7) {
+        background: linear-gradient(135deg, #A8E6CF 0%, #FFA500 100%);
+        color: #333 !important;
     }
 
     .navbar-nav .nav-link:hover {
-        background-color: var(--primary-color);
-        color: var(--white) !important;
-        transform: translateX(5px);
+        transform: translateX(5px) scale(1.02);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .navbar-nav .nav-link.active {
-        background-color: var(--primary-color);
-        color: var(--white) !important;
+        transform: translateX(5px) scale(1.02);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Overlay untuk mobile menu */
+    .navbar-collapse::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: -1;
+    }
+
+    .navbar-collapse.show::before {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -1240,32 +1417,58 @@ body {
     .navbar-toggler {
         padding: 0.25rem 0.5rem;
         font-size: 0.8rem;
-        background: rgba(255, 255, 255, 0.9);
+        background: linear-gradient(135deg, #00A86B 0%, #FFD700 100%);
         backdrop-filter: blur(10px);
-        border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 168, 107, 0.25);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        z-index: 1060;
+        overflow: hidden;
+    }
+
+    .navbar-toggler::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .navbar-toggler:hover::before {
+        left: 100%;
     }
 
     .navbar-toggler:hover {
-        background: rgba(255, 255, 255, 1);
-        transform: scale(1.05);
+        background: linear-gradient(135deg, #007A4D 0%, #FFA500 100%);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 6px 25px rgba(0, 168, 107, 0.35);
+    }
+
+    .navbar-toggler:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 2px 10px rgba(0, 168, 107, 0.25);
     }
 
     .navbar-toggler:focus {
-        box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.3);
+        box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.4), 0 3px 15px rgba(0, 168, 107, 0.25);
         outline: none;
     }
 
     .navbar-toggler-icon {
         width: 1em;
         height: 1em;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 168, 107, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        transform: rotate(90deg);
     }
 
     .extracurricular-icon {
@@ -1298,43 +1501,98 @@ body {
     }
 
     .navbar-collapse {
-        max-height: 60vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #FFFFFF;
+        backdrop-filter: none;
+        border-radius: 0;
+        padding: 5rem 1rem 1rem;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+        border: none;
+        transition: right 0.3s ease;
+        z-index: 1050;
         overflow-y: auto;
-        width: 100vw;
-        position: absolute;
-        left: 0;
+    }
+
+    .navbar-collapse.show {
         right: 0;
-        margin-left: 0;
-        margin-right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(15px);
-        border-radius: 0 0 var(--border-radius) var(--border-radius);
-        padding: 1rem 0;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .navbar-nav .nav-link {
-        font-size: 0.85rem;
-        padding: 0.75rem 1rem;
-        margin: 0.125rem 0.5rem;
-        border-radius: 0.5rem;
-        width: calc(100% - 1rem);
+        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+        margin: 0.2rem 0.3rem;
+        border-radius: 0.4rem;
+        width: calc(100% - 0.6rem);
         text-align: center;
-        color: var(--text-color) !important;
+        color: #000000 !important;
         font-weight: 600;
         transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .navbar-nav .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .navbar-nav .nav-link:hover::before {
+        left: 100%;
+    }
+
+    .navbar-nav .nav-link:nth-child(1) {
+        background: linear-gradient(135deg, #00A86B 0%, #FFD700 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(2) {
+        background: linear-gradient(135deg, #007A4D 0%, #FFA500 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(3) {
+        background: linear-gradient(135deg, #00A86B 0%, #FF8C00 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(4) {
+        background: linear-gradient(135deg, #A8E6CF 0%, #FFD700 100%);
+        color: #333 !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(5) {
+        background: linear-gradient(135deg, #00A86B 0%, #B8860B 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(6) {
+        background: linear-gradient(135deg, #007A4D 0%, #FFD700 100%);
+        color: var(--white) !important;
+    }
+
+    .navbar-nav .nav-link:nth-child(7) {
+        background: linear-gradient(135deg, #A8E6CF 0%, #FFA500 100%);
+        color: #333 !important;
     }
 
     .navbar-nav .nav-link:hover {
-        background-color: var(--primary-color);
-        color: var(--white) !important;
-        transform: translateX(5px);
+        transform: translateX(5px) scale(1.02);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .navbar-nav .nav-link.active {
-        background-color: var(--primary-color);
-        color: var(--white) !important;
+        transform: translateX(5px) scale(1.02);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 }
 
