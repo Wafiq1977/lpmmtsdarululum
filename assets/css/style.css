@@ -129,6 +129,32 @@ body {
     animation: logoFloat 3s ease-in-out infinite;
 }
 
+@media (max-width: 576px) {
+    .preloader-logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .preloader-logo img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preloader-logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+    }
+
+    .preloader-logo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .preloader-logo img {
     width: 100px;
     height: 100px;
@@ -147,6 +173,20 @@ body {
     background-clip: text;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 576px) {
+    .preloader-text {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preloader-text {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
 }
 
 .preloader-text::before {
@@ -176,6 +216,18 @@ body {
     font-size: 0.9rem;
     opacity: 0.8;
     animation: textFade 2s ease-in-out infinite 0.5s;
+}
+
+@media (max-width: 576px) {
+    .preloader-subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .preloader-subtitle {
+        font-size: 0.7rem;
+    }
 }
 
 @keyframes spin {
